@@ -1,0 +1,144 @@
+html{
+    box-sizing: border-box;
+}
+*,*::after,*::before{
+    box-sizing: inherit;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+p,li,td,th,h3{
+    font-family: "Roboto", sans-serif;
+}
+.container{
+    width: 100vw;
+    height:auto;
+    display: grid;
+    grid-template: repeat(4,auto),1fr;
+    grid-template-areas: 
+    'image'
+    'intro'
+    'instra'
+    'nutri';
+}
+.introduction{
+    grid-area: intro;
+}
+.instructions{
+    grid-area: instra;
+}
+.nutrition{
+    grid-area: nutri;
+}
+.container > *{
+    margin-right: 7%;
+    margin-left: 7%;
+}
+h1,h2,p,table{
+    margin-top: 20px;
+}
+h2{
+    color: #7d4131;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.introduction,.instructions,.nutrition{
+    margin-bottom:20px;
+}
+/* image */
+img{
+    grid-area: image;
+    max-width: 100% !important; 
+    margin: 0 !important;
+    
+}
+li{
+    margin-bottom: 8px;
+}
+/* preperation */
+.preperation{
+    background-color: #eeb5dcb1;
+    padding: 20px 20px;
+    border-radius: 10px;    
+    margin-top: 25px;
+}
+
+.span{
+    font-weight: 700;
+    padding: 0;
+}
+.preperation h3{
+    margin-bottom: 15px;
+    color: #700031;
+}
+/* indreadient */
+
+ul{
+    list-style-position: inside;
+    margin-left: 5px;
+}
+ol{
+    padding-left: 20px;
+}
+ol li{
+    padding-left: 10px;
+    margin-left: 5px;
+    
+  }
+  ol li::marker{
+    color: #7d4131;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+table{
+    width:100%;
+    margin-bottom: 40px;
+    border-collapse: collapse;
+}
+table th,td{
+    border-bottom: 1px solid rgba(83, 82, 83, 0.377);
+}
+th{
+    font-weight: 400;
+    text-align: start;
+    padding-left: 12%;
+   
+}
+td{
+    padding-left: 8%;
+    font-weight: 700;
+    color: #7d4131;
+    font-size: 1.22rem;
+}
+@media (min-width:576px){
+    body{
+        display: flex;
+        background-color: #f3e5d8;
+        width: 100%;
+        height: 100%;
+
+    }   
+    .container{
+        width: max(500px);
+        height: 90vh;
+        background-color: aliceblue;
+        align-items: center;
+        justify-content: center;
+        margin:  5vh auto;
+        overflow: auto;
+        border-radius: 20px;
+        
+    }
+    /* width */
+::-webkit-scrollbar {
+    width: 5px;
+    display: none;
+  }
+  img{
+    padding: 20px 20px 0px 20px;
+    border-radius: 30px;
+    
+  }
+
+}
